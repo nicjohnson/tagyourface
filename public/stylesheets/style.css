@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#ytapiplayer {
+  display: none;
+}
+
+#playercontainer {
+  position: relative;
+}
+
+.tag {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  position: absolute;
+  padding: 1em;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 853px;
+  background-image: -webkit-linear-gradient(top, #ccc, #ddd);
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
