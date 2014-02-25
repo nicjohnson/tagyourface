@@ -5,8 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+
+  <% if (videoid === '') { %>
+    <h1>You’re missing the video ID</h1>
+  <% } else { %>
     <h1>Tag Your Face</h1>
-    
+  <% } %>
 
     <div id="playercontainer">
       <div id="ytapiplayer">
@@ -53,6 +57,7 @@
       function onYouTubePlayerReady() {
         ytplayer = document.getElementById('myytplayer');
         ytplayer.cueVideoById({'videoId': '<%= videoid %>', 'startSeconds': 0});
+        console.log(ytplayer);
 
         var playlink = document.getElementById('play');
         playlink.onclick = function (ev) {
@@ -74,6 +79,7 @@
 
         ytplayer.onmousedown = function (ev) {
           var tagoffset = getTagOffset(ytplayer, ev);
+          ytplayer.pauseVideo();
           createTag(playercontainer, tagoffset);
         }
 
@@ -106,7 +112,7 @@
         var tag = document.createElement('div');
         tag.setAttribute('class', 'tag');
         tag.setAttribute('style', 'left: ' + tagoffset.left + 'px; top: ' + tagoffset.top + 'px');
-        tag.innerHTML = 'Yo';
+        tag.innerHTML = 'Nic Johnson';
         playercontainer.appendChild(tag);
       }
 

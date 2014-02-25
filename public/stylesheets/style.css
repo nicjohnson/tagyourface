@@ -16,11 +16,17 @@ a {
 }
 
 .tag {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  color: #fff;
+  /*border: 1px solid rgba(255, 255, 255, 0.75);*/
+  /*color: #fff;*/
   position: absolute;
-  padding: 1em;
+  padding: 0.33em 0.33em 0.33em 40px;
+  /*margin: 0 0 0 20px;*/
+  background: rgba(255, 255, 255, 0.5) url('/images/tag.png') 0.33em 50% no-repeat;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 600px;
+  width: 150px;
+  height: 150px;
+  font-size: 18px;
 }
 
 input[type=range] {
