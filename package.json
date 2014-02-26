@@ -8,5 +8,11 @@
   "dependencies": {
     "express": "3.4.8",
     "ejs": "*"
+  },
+  "devDependencies": {
+    "gulp-rename": "~1.1.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1",
+    "gulp": "~3.5.2"
   }
 }
