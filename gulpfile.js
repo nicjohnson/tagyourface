@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 
 gulp.task('build', function () {
-  return gulp.src(['./public/javascripts/zepto.min.js', './public/javascripts/tyf.js'])
+  return gulp.src(['./vendor/*.js', './lib/*.js'])
     .pipe(concat(pkg.name + '.js'))
     .pipe(gulp.dest('./public/javascripts'))
     .pipe(rename(pkg.name + '.min.js'))
